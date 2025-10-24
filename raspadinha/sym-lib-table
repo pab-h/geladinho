@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "IRF640N")(type "KiCad")(uri "${KIPRJMOD}/import/IRF640N/IRF640N.kicad_sym")(options "")(descr ""))
+)
