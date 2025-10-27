@@ -1,4 +1,6 @@
 *-backups
+*.lck
+*auto_saved_files*
 
 # Adapted from:
 # https://github.com/github/gitignore/blob/master/KiCad.gitignore
