@@ -638,6 +638,22 @@
     [
       "0ce4bf39-76b0-428c-8682-47e2500753cc",
       "Root"
+    ],
+    [
+      "a0b53ea5-873b-403f-a5fc-d02695d9fbc8",
+      "Power supply"
+    ],
+    [
+      "c4af42a8-46c6-40b9-a84b-e5efe0664160",
+      "Temperature control"
+    ],
+    [
+      "2b8b9fc5-ba35-494d-ab10-49f62bbcd487",
+      "UI"
+    ],
+    [
+      "7e5f2161-e419-4edf-867f-a791766c9953",
+      "Motor control"
     ]
   ],
   "text_variables": {}
