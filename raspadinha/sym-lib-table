@@ -2,4 +2,5 @@
   (version 7)
   (lib (name "IRF640N")(type "KiCad")(uri "${KIPRJMOD}/import/IRF640N/IRF640N.kicad_sym")(options "")(descr ""))
   (lib (name "Sorvete")(type "KiCad")(uri "${KIPRJMOD}/import/Sorvete/Sorvete.kicad_sym")(options "")(descr ""))
+  (lib (name "DEVKIT_V1_ESP32-WROOM-32")(type "KiCad")(uri "${KIPRJMOD}/import/DEVKIT_V1_ESP32-WROOM-32/DEVKIT_V1_ESP32-WROOM-32.kicad_sym")(options "")(descr ""))
 )
