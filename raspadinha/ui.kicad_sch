@@ -1786,7 +1786,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" "LCD 16X2 I2C"
 			(at 248.92 83.6901 0)
 			(effects
 				(font

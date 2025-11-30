@@ -302,7 +302,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "IRF640N:IRF640N"
+		(symbol "IRFZ44N:IRFZ44N"
 			(pin_names
 				(offset 1.016)
 			)
@@ -310,7 +310,7 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "Q"
-				(at 6.3564 0 0)
+				(at -8.89 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -318,8 +318,8 @@
 					(justify left bottom)
 				)
 			)
-			(property "Value" "IRF640N"
-				(at 6.3559 -2.5424 0)
+			(property "Value" "IRFZ44N"
+				(at -8.89 -7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -327,12 +327,13 @@
 					(justify left bottom)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "IRFZ44N:TO254P1016X419X2286-3"
 				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify bottom)
 					(hide yes)
 				)
 			)
@@ -364,7 +365,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description_1" "N-Channel 200V 18A (Tc) 150W (Tc) Through Hole TO-220AB"
+			(property "MAXIMUM_PACKAGE_HEIGHT" "22.86 mm"
 				(at 0 0 0)
 				(effects
 					(font
@@ -374,7 +375,7 @@
 					(hide yes)
 				)
 			)
-			(property "Package" "TO-263-3 Infineon Technologies"
+			(property "Package" "TO-220AB-3 Infineon"
 				(at 0 0 0)
 				(effects
 					(font
@@ -394,7 +395,7 @@
 					(hide yes)
 				)
 			)
-			(property "SnapEDA_Link" "https://www.snapeda.com/parts/IRF640N/Infineon/view-part/?ref=snap"
+			(property "Check_prices" "https://www.snapeda.com/parts/IRFZ44N/Infineon/view-part/?ref=eda"
 				(at 0 0 0)
 				(effects
 					(font
@@ -404,7 +405,7 @@
 					(hide yes)
 				)
 			)
-			(property "MP" "IRF640N"
+			(property "STANDARD" "IPC 7351B"
 				(at 0 0 0)
 				(effects
 					(font
@@ -414,7 +415,7 @@
 					(hide yes)
 				)
 			)
-			(property "Availability" "Not in stock"
+			(property "PARTREV" "09/21/10"
 				(at 0 0 0)
 				(effects
 					(font
@@ -424,7 +425,7 @@
 					(hide yes)
 				)
 			)
-			(property "Check_prices" "https://www.snapeda.com/parts/IRF640N/Infineon/view-part/?ref=eda"
+			(property "SnapEDA_Link" "https://www.snapeda.com/parts/IRFZ44N/Infineon/view-part/?ref=snap"
 				(at 0 0 0)
 				(effects
 					(font
@@ -434,10 +435,60 @@
 					(hide yes)
 				)
 			)
-			(symbol "IRF640N_0_0"
+			(property "MP" "IRFZ44N"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Description_1" "N-Channel 55 V 49A (Tc) 94W (Tc) Through Hole TO-220AB"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "SNAPEDA_PN" "IRFZ44N"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Availability" "In Stock"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MANUFACTURER" "Infineon"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(symbol "IRFZ44N_0_0"
 				(polyline
 					(pts
-						(xy -1.1176 2.413) (xy -1.1176 -2.54)
+						(xy 0 2.54) (xy 0 -2.54)
 					)
 					(stroke
 						(width 0.254)
@@ -449,7 +500,31 @@
 				)
 				(polyline
 					(pts
-						(xy -1.1176 -2.54) (xy -2.54 -2.54)
+						(xy 0.762 3.175) (xy 0.762 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.54) (xy 0.762 1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.54) (xy 3.81 2.54)
 					)
 					(stroke
 						(width 0.1524)
@@ -459,42 +534,92 @@
 						(type none)
 					)
 				)
-				(rectangle
-					(start -0.2545 -0.8907)
-					(end 0.508 0.889)
+				(polyline
+					(pts
+						(xy 0.762 0.762) (xy 0.762 0)
+					)
 					(stroke
-						(width 0.1)
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0) (xy 0.762 -0.762)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.905) (xy 0.762 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -2.54) (xy 0.762 -3.175)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy 2.032 0.762) (xy 2.032 -0.762) (xy 1.016 0)
+					)
+					(stroke
+						(width 0.1524)
 						(type default)
 					)
 					(fill
 						(type outline)
 					)
 				)
-				(rectangle
-					(start -0.2544 1.2719)
-					(end 0.508 2.54)
+				(circle
+					(center 2.54 2.54)
+					(radius 0.3592)
 					(stroke
-						(width 0.1)
+						(width 0)
 						(type default)
 					)
 					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -0.2541 -2.5414)
-					(end 0.508 -1.27)
-					(stroke
-						(width 0.1)
-						(type default)
-					)
-					(fill
-						(type outline)
+						(type none)
 					)
 				)
 				(polyline
 					(pts
-						(xy 0.508 0) (xy 1.778 -0.508)
+						(xy 2.54 0) (xy 2.54 -2.54)
 					)
 					(stroke
 						(width 0.1524)
@@ -506,7 +631,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0.508 -1.905) (xy 2.54 -1.905)
+						(xy 2.54 -2.54) (xy 0.762 -2.54)
 					)
 					(stroke
 						(width 0.1524)
@@ -518,115 +643,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0.762 0) (xy 1.651 -0.254)
-					)
-					(stroke
-						(width 0.3048)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.651 0.254) (xy 0.762 0)
-					)
-					(stroke
-						(width 0.3048)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.651 0) (xy 1.397 0)
-					)
-					(stroke
-						(width 0.3048)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.651 0) (xy 2.54 0)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.651 -0.254) (xy 1.651 0)
-					)
-					(stroke
-						(width 0.3048)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.778 0.508) (xy 0.508 0)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.778 -0.508) (xy 1.778 0.508)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.54) (xy 2.54 1.905)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 1.905) (xy 0.5334 1.905)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 1.905) (xy 4.1275 1.905)
+						(xy 2.54 -2.54) (xy 3.81 -2.54)
 					)
 					(stroke
 						(width 0.1524)
@@ -637,10 +654,10 @@
 					)
 				)
 				(circle
-					(center 2.54 1.905)
-					(radius 0.127)
+					(center 2.54 -2.54)
+					(radius 0.3592)
 					(stroke
-						(width 0.4064)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -649,7 +666,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.54 0) (xy 2.54 -1.905)
+						(xy 3.302 0.508) (xy 3.048 0.254)
 					)
 					(stroke
 						(width 0.1524)
@@ -661,30 +678,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.54 -1.905) (xy 2.54 -2.54)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.54 -1.905)
-					(radius 0.127)
-					(stroke
-						(width 0.4064)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.4925 0.762) (xy 3.2385 0.508)
+						(xy 3.81 2.54) (xy 3.81 0.508)
 					)
 					(stroke
 						(width 0.1524)
@@ -696,7 +690,7 @@
 				)
 				(polyline
 					(pts
-						(xy 3.4925 0.762) (xy 4.1275 0.762)
+						(xy 3.81 0.508) (xy 3.302 0.508)
 					)
 					(stroke
 						(width 0.1524)
@@ -708,7 +702,7 @@
 				)
 				(polyline
 					(pts
-						(xy 3.5719 -0.4763) (xy 4.1275 -0.4763)
+						(xy 3.81 0.508) (xy 3.81 -2.54)
 					)
 					(stroke
 						(width 0.1524)
@@ -720,43 +714,7 @@
 				)
 				(polyline
 					(pts
-						(xy 4.1275 1.905) (xy 4.1275 0.762)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.1275 0.762) (xy 3.5719 -0.4763)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.1275 0.762) (xy 4.7625 0.762)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.1275 0.635) (xy 3.6513 -0.3969) (xy 4.6038 -0.3969) (xy 4.1275 0.635)
+						(xy 3.81 0.508) (xy 3.302 -0.254) (xy 4.318 -0.254) (xy 3.81 0.508)
 					)
 					(stroke
 						(width 0.1524)
@@ -768,7 +726,7 @@
 				)
 				(polyline
 					(pts
-						(xy 4.1275 -0.4763) (xy 4.1275 -1.905)
+						(xy 4.318 0.508) (xy 3.81 0.508)
 					)
 					(stroke
 						(width 0.1524)
@@ -780,7 +738,7 @@
 				)
 				(polyline
 					(pts
-						(xy 4.1275 -0.4763) (xy 4.6831 -0.4763)
+						(xy 4.572 0.762) (xy 4.318 0.508)
 					)
 					(stroke
 						(width 0.1524)
@@ -788,74 +746,11 @@
 					)
 					(fill
 						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.1275 -1.905) (xy 2.54 -1.905)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.6831 -0.4763) (xy 4.1275 0.762)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.7625 0.762) (xy 5.0165 1.016)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(text "G"
-					(at -2.5417 -1.2709 0)
-					(effects
-						(font
-							(size 1.0167 1.0167)
-						)
-						(justify left bottom)
-					)
-				)
-				(text "D"
-					(at 1.2702 2.5404 0)
-					(effects
-						(font
-							(size 1.0162 1.0162)
-						)
-						(justify left bottom)
-					)
-				)
-				(text "S"
-					(at 1.2703 -3.1757 0)
-					(effects
-						(font
-							(size 1.0162 1.0162)
-						)
-						(justify left bottom)
 					)
 				)
 				(pin passive line
 					(at -2.54 -2.54 0)
-					(length 0)
+					(length 2.54)
 					(name "~"
 						(effects
 							(font
@@ -1349,159 +1244,6 @@
 		)
 	)
 	(symbol
-		(lib_id "IRF640N:IRF640N")
-		(at 162.56 90.17 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "254a6313-92c6-4d3f-beea-9b4cb5a95eb0")
-		(property "Reference" "Q3"
-			(at 168.91 88.6377 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "IRF640N"
-			(at 168.91 91.1777 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 162.56 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 162.56 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 162.56 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MF" "Infineon Technologies"
-			(at 162.56 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Description_1" "N-Channel 200V 18A (Tc) 150W (Tc) Through Hole TO-220AB"
-			(at 162.56 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Package" "TO-263-3 Infineon Technologies"
-			(at 162.56 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Price" "None"
-			(at 162.56 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "SnapEDA_Link" "https://www.snapeda.com/parts/IRF640N/Infineon/view-part/?ref=snap"
-			(at 162.56 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "MP" "IRF640N"
-			(at 162.56 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Availability" "Not in stock"
-			(at 162.56 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Check_prices" "https://www.snapeda.com/parts/IRF640N/Infineon/view-part/?ref=eda"
-			(at 162.56 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "fdd39201-a628-44a7-93f2-2b59c1517e04")
-		)
-		(pin "2"
-			(uuid "3fa69c1e-ff35-4c68-9a00-32007e69b546")
-		)
-		(pin "1"
-			(uuid "71ab152f-4957-4c9f-a6c2-8a0dbf8e4362")
-		)
-		(instances
-			(project "raspadinha"
-				(path "/0ce4bf39-76b0-428c-8682-47e2500753cc/7e5f2161-e419-4edf-867f-a791766c9953"
-					(reference "Q3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Diode:1N4002")
 		(at 156.21 104.14 270)
 		(unit 1)
@@ -1653,6 +1395,210 @@
 			(project "raspadinha"
 				(path "/0ce4bf39-76b0-428c-8682-47e2500753cc/7e5f2161-e419-4edf-867f-a791766c9953"
 					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "IRFZ44N:IRFZ44N")
+		(at 162.56 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f1f9727c-5913-4403-a306-6d0aa735ce7e")
+		(property "Reference" "Q1"
+			(at 168.91 88.8999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "IRFZ44N"
+			(at 168.91 91.4399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "IRFZ44N:TO254P1016X419X2286-3"
+			(at 162.56 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 162.56 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "Infineon Technologies"
+			(at 162.56 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "22.86 mm"
+			(at 162.56 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Package" "TO-220AB-3 Infineon"
+			(at 162.56 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Price" "None"
+			(at 162.56 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/IRFZ44N/Infineon/view-part/?ref=eda"
+			(at 162.56 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "IPC 7351B"
+			(at 162.56 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "09/21/10"
+			(at 162.56 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/IRFZ44N/Infineon/view-part/?ref=snap"
+			(at 162.56 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MP" "IRFZ44N"
+			(at 162.56 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "N-Channel 55 V 49A (Tc) 94W (Tc) Through Hole TO-220AB"
+			(at 162.56 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SNAPEDA_PN" "IRFZ44N"
+			(at 162.56 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Availability" "In Stock"
+			(at 162.56 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "Infineon"
+			(at 162.56 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2e659799-4304-43c5-94db-38f9fd2893cd")
+		)
+		(pin "2"
+			(uuid "f54c0937-5e47-4687-b80d-cbf1ee977e67")
+		)
+		(pin "3"
+			(uuid "0d0224a6-2286-40ee-aeee-d3f17d9282e1")
+		)
+		(instances
+			(project ""
+				(path "/0ce4bf39-76b0-428c-8682-47e2500753cc/7e5f2161-e419-4edf-867f-a791766c9953"
+					(reference "Q1")
 					(unit 1)
 				)
 			)

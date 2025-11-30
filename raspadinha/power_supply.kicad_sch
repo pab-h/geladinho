@@ -665,6 +665,142 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Switch:SW_SPST"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SW"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SW_SPST"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Single Pole Single Throw (SPST) switch"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "switch lever"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SW_SPST_0_0"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 0.254) (xy 1.524 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SW_SPST_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(no_connect
 		(at 134.62 90.17)
@@ -673,6 +809,16 @@
 	(no_connect
 		(at 134.62 100.33)
 		(uuid "f542eb9a-9310-4eea-9421-4c78b63a6e0c")
+	)
+	(wire
+		(pts
+			(xy 100.33 101.6) (xy 100.33 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04e68ae0-5bfe-4e49-a42b-715c738cbe42")
 	)
 	(wire
 		(pts
@@ -686,16 +832,6 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 90.17) (xy 105.41 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "610b571c-3fa5-4e34-8905-a0b0b99777e8")
-	)
-	(wire
-		(pts
 			(xy 121.92 115.57) (xy 121.92 118.11)
 		)
 		(stroke
@@ -706,6 +842,16 @@
 	)
 	(wire
 		(pts
+			(xy 100.33 90.17) (xy 100.33 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d37d9ac-0631-4a69-b7a6-b87e7ed3545b")
+	)
+	(wire
+		(pts
 			(xy 134.62 102.87) (xy 139.7 102.87)
 		)
 		(stroke
@@ -713,16 +859,6 @@
 			(type default)
 		)
 		(uuid "86184637-1972-45dd-9e64-c4866c6237a0")
-	)
-	(wire
-		(pts
-			(xy 105.41 90.17) (xy 105.41 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "97d4bc60-ab13-4aa6-8160-aec617e35bdf")
 	)
 	(wire
 		(pts
@@ -746,13 +882,23 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 99.06) (xy 105.41 101.6)
+			(xy 100.33 113.03) (xy 100.33 118.11)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "cebcc467-ed24-49e6-8950-daa0f39b6040")
+	)
+	(wire
+		(pts
+			(xy 100.33 90.17) (xy 109.22 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff638190-e210-4595-af21-d5fca8d76317")
 	)
 	(table
 		(column_count 2)
@@ -961,7 +1107,7 @@
 	)
 	(hierarchical_label "GND"
 		(shape output)
-		(at 105.41 101.6 270)
+		(at 100.33 118.11 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1005,7 +1151,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 105.41 95.25 0)
+		(at 100.33 109.22 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1014,7 +1160,7 @@
 		(fields_autoplaced yes)
 		(uuid "33958d53-b378-48fa-9271-f7177010025b")
 		(property "Reference" "R1"
-			(at 107.95 93.9799 0)
+			(at 102.87 107.9499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1023,7 +1169,7 @@
 			)
 		)
 		(property "Value" "0R"
-			(at 107.95 96.5199 0)
+			(at 102.87 110.4899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1032,7 +1178,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 103.632 95.25 90)
+			(at 98.552 109.22 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1041,7 +1187,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 105.41 95.25 0)
+			(at 100.33 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1050,7 +1196,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 105.41 95.25 0)
+			(at 100.33 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1068,6 +1214,76 @@
 			(project "raspadinha"
 				(path "/0ce4bf39-76b0-428c-8682-47e2500753cc/a0b53ea5-873b-403f-a5fc-d02695d9fbc8"
 					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_SPST")
+		(at 100.33 96.52 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ccfdf268-c731-41b6-923e-83ab7edcab69")
+		(property "Reference" "SW2"
+			(at 102.87 95.2499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SW_SPST"
+			(at 102.87 97.7899 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 100.33 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.33 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Single Pole Single Throw (SPST) switch"
+			(at 100.33 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "fb920940-e566-4645-9875-414a644ac8a3")
+		)
+		(pin "1"
+			(uuid "722eb407-f1fe-47b0-a21b-b31663ae1881")
+		)
+		(instances
+			(project ""
+				(path "/0ce4bf39-76b0-428c-8682-47e2500753cc/a0b53ea5-873b-403f-a5fc-d02695d9fbc8"
+					(reference "SW2")
 					(unit 1)
 				)
 			)
