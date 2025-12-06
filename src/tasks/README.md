@@ -17,7 +17,7 @@ A pasta `tasks/` contém **todas as tasks FreeRTOS**, cada uma isolada em seu pr
 ## Boas práticas
 
 - Cada task deve ter:
-  - Seu `.cpp` e `.hpppp`.
+  - Seu `.cpp` e `.hpp`.
   - Depender apenas de HAL e utils.
   - Usar filas/semáforos, nunca chamar outra task diretamente.
 

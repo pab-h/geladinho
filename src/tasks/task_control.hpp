@@ -1,5 +1,5 @@
 #pragma once
 
 namespace tasks {
-    void startTemperatureTask();
+    void startControlTask();
 }
