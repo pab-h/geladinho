@@ -14,12 +14,12 @@ For example, see the structure of the following example libraries `Foo` and `Bar
 |  |  |--examples
 |  |  |--src
 |  |     |- Bar.c
-|  |     |- Bar.h
-|  |  |- library.json (optional. for custom build options, etc) https://docs.platformio.org/page/librarymanager/config.html
+|  |     |- Bar.hpp
+|  |  |- library.json (optional. for custom build options, etc) https://docs.platformio.org/page/librarymanager/config.hpptml
 |  |
 |  |--Foo
 |  |  |- Foo.c
-|  |  |- Foo.h
+|  |  |- Foo.hpp
 |  |
 |  |- README --> THIS FILE
 |
@@ -29,8 +29,8 @@ For example, see the structure of the following example libraries `Foo` and `Bar
 
 Example contents of `src/main.c` using Foo and Bar:
 ```
-#include <Foo.h>
-#include <Bar.h>
+#include <Foo.hpp>
+#include <Bar.hpp>
 
 int main (void)
 {
@@ -43,4 +43,4 @@ The PlatformIO Library Dependency Finder will find automatically dependent
 libraries by scanning project source files.
 
 More information about PlatformIO Library Dependency Finder
-- https://docs.platformio.org/page/librarymanager/ldf.html
+- https://docs.platformio.org/page/librarymanager/ldf.hpptml
