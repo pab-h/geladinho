@@ -20,13 +20,10 @@ void startControlTask() {
 
 }
 
-
-namespace {
-
 void controlTask(void*) {
     for (;;) {
-        float current = state::currentTemperature.load();
-        float target = state::targetTemperature.load();
+        float current = state::getCurrentTemperature();
+        float target = state::getTargetTemperature();
 
         float diff = current - target;
 
@@ -46,6 +43,4 @@ void controlTask(void*) {
 
         vTaskDelay(pdMS_TO_TICKS(1000)); // roda a cada 1 segundo
     }
-}
-
 }

@@ -21,14 +21,15 @@ void startTemperatureTask() {
 
 }
 
-
-namespace {
     void temperatureTask(void* parameter) {
+        vTaskDelay(pdMS_TO_TICKS(100));
+
         for (;;) {
             float temp = temperature::readCelsius(10);
-            state::currentTemperature.store(temp);
+            Serial.printf("[TempTask] Leitura Raw/Calc: %.2f °C\n", temp);
+            state::setCurrentTemperature(temp);
 
-            vTaskDelay(pdMS_TO_TICKS(500)); // mede a cada 500ms
+            // Aguarda 2000ms antes da próxima leitura
+            vTaskDelay(pdMS_TO_TICKS(2000)); 
         }
     }
-}

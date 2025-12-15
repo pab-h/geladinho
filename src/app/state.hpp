@@ -1,12 +1,17 @@
 #pragma once
-#include <atomic>
+#include <freertos/FreeRTOS.h>
+#include <freertos/semphr.h>
 
 namespace state {
 
-    // Temperatura atual lida pelo sensor
-    extern std::atomic<float> currentTemperature;
+    void init();
 
-    // Setpoint definido pelo usuário (pode editar de outra task)
-    extern std::atomic<float> targetTemperature;
+    //Target Temperature 
+    void setTargetTemperature(float temp);
+    float getTargetTemperature();
+
+    //Current Temperature (Sensor)
+    void setCurrentTemperature(float temp);
+    float getCurrentTemperature();
 
 }

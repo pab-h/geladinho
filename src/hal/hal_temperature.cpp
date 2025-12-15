@@ -5,42 +5,42 @@
 #include <cmath>
 #include "hal_temperature.hpp"
 
-// constantes do seu circuito
+// Constantes do circuito físico
+// constexpr promete que essas variáveis NÃO IRÃO MUDAR
 namespace {
     constexpr float VCC = 3.3f;
     constexpr float R_FIXED = 10000.0f;
     constexpr float R0 = 10000.0f;
-    constexpr float BETA = 3380.0f;
-    // constexpr float T0 = 25.0f + 273.15f;
+    constexpr float BETA = 3380.0f; // quando receber o sensor, tem que ver se os valores é de fato esse no datasheet.
+    constexpr float T0_KELVIN = 298.15f; // (Temperatura de referência (25°C))
 }
-// ------------ Inicialização ------------
+
+// Inicialização
 void temperature::init() {
     pinMode(pins::TEMP_SENSOR_PIN, INPUT);
 }
 
-// ------------ Converte RAW → tensão em volts ------------
+// Converte RAW → tensão em volts 
 static float rawToVoltage(int raw) {
     return (raw / 4095.0f) * VCC;
 }
 
-// ------------ Converte tensão → resistência da NTC ------------
+// Converte tensão → resistência da NTC 
 static float voltageToRntc(float Vout) {
     if (Vout <= 0.0f) return INFINITY;
     if (Vout >= VCC) return 1e9f;
 
-    // Vout = VCC * Rntc / (Rntc + R_FIXED)
-    // Rntc = R_FIXED * Vout / (VCC - Vout)
     return R_FIXED * (Vout / (VCC - Vout));
 }
 
-// ------------ Converte resistência → temperatura ------------
+// Converte resistência → temperatura 
 static float rToCelsius(float Rntc) {
-    float invT = (1.0f / T0) + (1.0f / BETA) * logf(Rntc / R0);
+    float invT = (1.0f / T0_KELVIN) + (1.0f / BETA) * logf(Rntc / R0);
     float Tk = 1.0f / invT;
     return Tk - 273.15f;
 }
 
-// ------------ Leitura completa ------------
+// Leitura completa
 float temperature::readCelsius(uint8_t samples) {
     float acc = 0;
 
