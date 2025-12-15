@@ -2,26 +2,32 @@
 #include "app/state.hpp"
 #include <Arduino.h>
 
-void controlTask(void* parameter);
+static void controlTask(void* parameter);
 
 namespace tasks {
 
-void startControlTask() {
-    xTaskCreatePinnedToCore(
-        controlTask,
-        "ControlTask",
-        4096,
-        nullptr,
-        1,
-        nullptr,
-        1
-    );
-}
+    namespace temperature {
+
+        void startControlTask() {
+            xTaskCreatePinnedToCore(
+                controlTask,
+                "ControlTask",
+                4096,
+                nullptr,
+                1,
+                nullptr,
+                1
+            );
+        }
+
+    }
 
 }
 
-void controlTask(void*) {
+static void controlTask(void* parameter) {
+
     for (;;) {
+
         float current = state::getCurrentTemperature();
         float target = state::getTargetTemperature();
 
@@ -43,4 +49,5 @@ void controlTask(void*) {
 
         vTaskDelay(pdMS_TO_TICKS(1000)); // roda a cada 1 segundo
     }
+
 }

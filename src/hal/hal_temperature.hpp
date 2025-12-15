@@ -2,11 +2,15 @@
 
 #include <cstdint>
 
-namespace temperature {
+namespace hal {
 
-    void init();
+    namespace temperature {
 
-    // Lê temperatura em graus Celsius
-    float readCelsius(uint8_t samples = 10);
+        void init();
+
+        // Lê temperatura em graus Celsius
+        float readCelsius(uint8_t samples = 10);
+        
+    }
 
 }

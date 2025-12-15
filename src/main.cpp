@@ -9,6 +9,20 @@
 
 void setup() {
 
+    Serial.begin(9600);
+
+    delay(1000);
+    
+    Serial.println("\n--- INICIANDO SISTEMA GELADINHO ---");
+    
+    state::init();
+    hal::temperature::init();
+    
+    tasks::temperature::startControlTask();
+    tasks::temperature::startTemperatureTask();
+
+    Serial.println("Setup concluído. Tasks rodando...");
+    
 }
 
 void loop() {
