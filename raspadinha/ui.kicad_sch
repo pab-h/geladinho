@@ -684,7 +684,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Sorvete:Display_LCD_16x2_I2C"
+		(symbol "Sorvete:Display_OLED_I2C"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -731,7 +731,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "Display_LCD_16x2_I2C_0_1"
+			(symbol "Display_OLED_I2C_0_1"
 				(rectangle
 					(start 0 -1.27)
 					(end 21.59 -13.97)
@@ -744,8 +744,8 @@
 					)
 				)
 			)
-			(symbol "Display_LCD_16x2_I2C_1_1"
-				(text "Display LCD 16x2 I2C"
+			(symbol "Display_OLED_I2C_1_1"
+				(text "Display OLED I2C"
 					(at -0.254 0.508 0)
 					(effects
 						(font
@@ -1698,6 +1698,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Sorvete:Display_OLED_I2C")
+		(at 226.06 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2837bd9e-e218-40af-881f-c6e79cf077db")
+		(property "Reference" "DS1"
+			(at 248.92 81.1501 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 248.92 83.6901 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 226.06 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 226.06 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 226.06 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "1c545a0d-e916-4941-bc18-92ca83985b67")
+		)
+		(pin "3"
+			(uuid "790b65aa-ab0b-495f-815a-5fa1f6bdc644")
+		)
+		(pin "2"
+			(uuid "ceabd35e-132d-4d05-acc3-ca59699ef144")
+		)
+		(pin "1"
+			(uuid "3dce8498-d948-4ec0-9e5b-d36a73975544")
+		)
+		(instances
+			(project ""
+				(path "/0ce4bf39-76b0-428c-8682-47e2500753cc/2b8b9fc5-ba35-494d-ab10-49f62bbcd487"
+					(reference "DS1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 203.2 68.58 0)
 		(unit 1)
@@ -1762,82 +1838,6 @@
 			(project "raspadinha"
 				(path "/0ce4bf39-76b0-428c-8682-47e2500753cc/2b8b9fc5-ba35-494d-ab10-49f62bbcd487"
 					(reference "R8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Sorvete:Display_LCD_16x2_I2C")
-		(at 226.06 76.2 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "401d23d9-9191-470c-9c75-0f93ccf2126b")
-		(property "Reference" "DS1"
-			(at 248.92 81.1501 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "LCD 16X2 I2C"
-			(at 248.92 83.6901 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 226.06 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 226.06 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 226.06 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "9e034721-9a59-48e6-af6a-9f8478815b79")
-		)
-		(pin "3"
-			(uuid "349ef9bf-7522-4ab7-81d1-4360cf082880")
-		)
-		(pin "4"
-			(uuid "e545a7ec-a95b-4f68-be80-a943c6fbd270")
-		)
-		(pin "1"
-			(uuid "4264dfa5-af81-44af-bbc3-6d1f697dffb2")
-		)
-		(instances
-			(project "raspadinha"
-				(path "/0ce4bf39-76b0-428c-8682-47e2500753cc/2b8b9fc5-ba35-494d-ab10-49f62bbcd487"
-					(reference "DS1")
 					(unit 1)
 				)
 			)
