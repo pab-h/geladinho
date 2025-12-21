@@ -4,7 +4,9 @@ namespace tasks {
 
     namespace temperature {
 
-        void startTemperatureTask();
+        void startReadTemperatureTask();
+
+        void startControlTask();
 
     }
 
