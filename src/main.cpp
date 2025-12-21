@@ -22,8 +22,8 @@ void setup() {
     hal::peltier::init();
 
     tasks::peltier::startPeltierTask();
-    tasks::temperature::startTemperatureTask();
-    tasks::control::startControlTask();
+    tasks::temperature::startReadTemperatureTask();
+    tasks::temperature::startControlTask();
 
     Serial.println("Setup concluído. Tasks rodando...");
     
