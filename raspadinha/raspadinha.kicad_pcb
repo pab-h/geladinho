@@ -7,6 +7,13 @@
 		(legacy_teardrops no)
 	)
 	(paper "A4")
+	(title_block
+		(title "Geladinho: Placa de Circuito Impresso")
+		(date "2025-12-19")
+		(rev "v1.0.0")
+		(company "Universidade Federal do Ceará")
+		(comment 1 "Projetada para a fabricação caseira")
+	)
 	(layers
 		(0 "F.Cu" signal)
 		(2 "B.Cu" signal)
@@ -78,5 +85,16 @@
 		)
 	)
 	(net 0 "")
+	(gr_rect
+		(start 62 42.5)
+		(end 205 122)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "Edge.Cuts")
+		(uuid "4b4f5be6-e16a-48e7-bcec-cefc16906530")
+	)
 	(embedded_fonts no)
 )

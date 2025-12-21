@@ -7,7 +7,7 @@
 	(title_block
 		(title "Geladinho, Temperature control")
 		(date "2025-11-20")
-		(rev "v1.0.0")
+		(rev "v1.1.0")
 		(company "Universidade Federal Do Ceará")
 	)
 	(lib_symbols
@@ -1089,7 +1089,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Motor:Fan_CPU_4pin"
+		(symbol "Motor:Fan"
 			(pin_names
 				(offset 0)
 			)
@@ -1105,7 +1105,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "Fan_CPU_4pin"
+			(property "Value" "Fan"
 				(at 2.54 -2.54 0)
 				(effects
 					(font
@@ -1123,7 +1123,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf"
+			(property "Datasheet" "~"
 				(at 0 0.254 0)
 				(effects
 					(font
@@ -1132,7 +1132,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "CPU Fan, tacho output, PWM input, 4-pin connector"
+			(property "Description" "Fan"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1141,7 +1141,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "Fan Motor tacho PWM"
+			(property "ki_keywords" "Fan Motor"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1150,7 +1150,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "FanPinHeader*P2.54mm*Vertical* PinHeader*P2.54mm*Vertical* TerminalBlock*"
+			(property "ki_fp_filters" "PinHeader*P2.54mm* TerminalBlock*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1159,106 +1159,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "Fan_CPU_4pin_0_0"
-				(polyline
-					(pts
-						(xy -5.08 2.032) (xy -5.334 2.159)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -5.08 2.032) (xy -5.207 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -4.572 1.524)
-					(mid -5.08 1.0182)
-					(end -5.588 1.524)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -5.588 1.524)
-					(mid -5.4392 1.8832)
-					(end -5.08 2.032)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -4.064 2.54) (xy -4.064 1.016) (xy -3.302 1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Fan_CPU_4pin_0_1"
-				(polyline
-					(pts
-						(xy -5.334 -3.302) (xy -5.08 -3.302) (xy -5.08 -3.048) (xy -4.826 -3.048) (xy -4.826 -3.302) (xy -4.318 -3.302)
-						(xy -4.318 -3.048) (xy -4.064 -3.048) (xy -4.064 -3.302) (xy -3.556 -3.302)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -4.064 2.54) (xy -5.08 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.54 -1.016) (xy -4.064 -1.016) (xy -4.064 -2.54) (xy -5.08 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
+			(symbol "Fan_0_1"
 				(arc
 					(start 0 3.81)
 					(mid -0.0015 0.9048)
@@ -1355,43 +1256,7 @@
 					)
 				)
 			)
-			(symbol "Fan_CPU_4pin_1_1"
-				(pin passive line
-					(at -7.62 2.54 0)
-					(length 2.54)
-					(name "Tacho"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 -2.54 0)
-					(length 2.54)
-					(name "PWM"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
+			(symbol "Fan_1_1"
 				(pin passive line
 					(at 0 7.62 270)
 					(length 2.54)
@@ -1402,7 +1267,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1420,7 +1285,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1453,14 +1318,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bfc94d8a-6e8d-4660-ba51-754ab771bd44")
-	)
-	(no_connect
-		(at 148.59 93.98)
-		(uuid "48062c86-4e89-49c1-b41b-31d760ea1cf7")
-	)
-	(no_connect
-		(at 148.59 99.06)
-		(uuid "aa8e324a-455f-47fa-84fb-469dcb780adc")
 	)
 	(wire
 		(pts
@@ -1712,82 +1569,6 @@
 		(uuid "f0eab733-1be5-494e-ba3b-ff84bad78568")
 	)
 	(symbol
-		(lib_id "Motor:Fan_CPU_4pin")
-		(at 156.21 96.52 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1e9f4495-4ba4-4790-8145-1964dd57d236")
-		(property "Reference" "M1"
-			(at 161.29 95.2499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Fan_CPU_4pin"
-			(at 161.29 97.7899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 156.21 96.266 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf"
-			(at 156.21 96.266 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "CPU Fan, tacho output, PWM input, 4-pin connector"
-			(at 156.21 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "7fd146fd-45e6-43e4-9849-958a85d0bb7e")
-		)
-		(pin "4"
-			(uuid "c762ee6c-99dc-49d8-80ca-045998379aed")
-		)
-		(pin "2"
-			(uuid "f9b014d5-1e32-48dc-a24e-a575974db48b")
-		)
-		(pin "1"
-			(uuid "4dde149d-973d-4208-ac5e-fb524492eb6d")
-		)
-		(instances
-			(project "raspadinha"
-				(path "/0ce4bf39-76b0-428c-8682-47e2500753cc/c4af42a8-46c6-40b9-a84b-e5efe0664160"
-					(reference "M1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "IRFZ44N:IRFZ44N")
 		(at 120.65 87.63 0)
 		(unit 1)
@@ -2019,7 +1800,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal"
 			(at 182.372 88.9 90)
 			(effects
 				(font
@@ -2087,7 +1868,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal"
 			(at 110.49 91.948 90)
 			(effects
 				(font
@@ -2157,7 +1938,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical"
 			(at 184.15 99.06 0)
 			(effects
 				(font
@@ -2200,6 +1981,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Motor:Fan")
+		(at 156.21 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ce21c73b-f2c3-44ed-b348-d443cb463216")
+		(property "Reference" "M1"
+			(at 161.29 95.2499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Fan"
+			(at 161.29 97.7899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical"
+			(at 156.21 96.266 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 156.21 96.266 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fan"
+			(at 156.21 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "58e7aa39-8c5d-486a-af16-a7a0baa28462")
+		)
+		(pin "1"
+			(uuid "0c488567-9a33-46e5-a86c-9f9c55ae0432")
+		)
+		(instances
+			(project ""
+				(path "/0ce4bf39-76b0-428c-8682-47e2500753cc/c4af42a8-46c6-40b9-a84b-e5efe0664160"
+					(reference "M1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:PeltierElement")
 		(at 123.19 101.6 270)
 		(unit 1)
@@ -2227,7 +2078,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal"
 			(at 121.412 101.6 0)
 			(effects
 				(font
@@ -2297,7 +2148,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal"
 			(at 99.822 101.6 90)
 			(effects
 				(font
