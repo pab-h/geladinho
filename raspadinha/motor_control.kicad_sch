@@ -7,7 +7,7 @@
 	(title_block
 		(title "Geladinho, Motor control")
 		(date "2025-11-20")
-		(rev "v1.0.0")
+		(rev "v1.1.0")
 		(company "Universidade Federal Do Ceará")
 	)
 	(lib_symbols
@@ -1201,7 +1201,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal"
 			(at 165.1 105.156 0)
 			(effects
 				(font
@@ -1358,7 +1358,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal"
 			(at 135.382 104.14 90)
 			(effects
 				(font
@@ -1630,7 +1630,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal"
 			(at 146.05 94.488 90)
 			(effects
 				(font
