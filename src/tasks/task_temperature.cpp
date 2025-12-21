@@ -34,6 +34,6 @@ static void temperatureTask(void* parameter) {
         state::setCurrentTemperature(temp);
 
         // Aguarda 2000ms antes da próxima leitura
-        vTaskDelay(pdMS_TO_TICKS(2000)); 
+        vTaskDelay(pdMS_TO_TICKS(1000)); 
     }
 }

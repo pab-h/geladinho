@@ -1,4 +1,5 @@
 #include "task_control.hpp"
+#include "task_peltier.hpp"
 #include "app/state.hpp"
 #include <Arduino.h>
 
@@ -6,7 +7,7 @@ static void controlTask(void* parameter);
 
 namespace tasks {
 
-    namespace temperature {
+    namespace control {
 
         void startControlTask() {
             xTaskCreatePinnedToCore(
@@ -36,11 +37,13 @@ static void controlTask(void* parameter) {
         if (diff > 0.5f) {
             // temperatura está acima → precisa resfriar
             Serial.println("Controle: Acima do alvo -> Deve resfriar");
-            // aqui vamos chamar a task do Peltier futuramente
+            tasks::peltier::setTargetPower(100);
         }
         else if (diff < -0.5f) {
             // temperatura está abaixo → está frio demais
             Serial.println("Controle: Abaixo do alvo -> Desligar Peltier");
+            tasks::peltier::setTargetPower(0);
+
             // aqui vamos desligar o Peltier futuramente
         }
         else {

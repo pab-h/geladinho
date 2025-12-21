@@ -2,7 +2,7 @@
 
 namespace tasks {
 
-    namespace temperature{
+    namespace control{
 
         void startControlTask();
 
