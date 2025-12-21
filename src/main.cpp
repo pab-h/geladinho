@@ -1,13 +1,19 @@
 #include <Arduino.h>
-#include "tasks/task_temperature.hpp"
-#include "tasks/task_control.hpp"
 #include <iostream>
-#include "tasks/task_temperature.hpp"
-#include "tasks/task_control.hpp"
-#include "tasks/task_peltier.hpp"
-#include "app/state.hpp"
-#include "hal/hal_temperature.hpp"
-#include "hal/hal_peltier.hpp"
+
+// state
+#include "app/state.hpp"                // global states
+
+// hal
+#include "hal/hal_temperature.hpp"      // temperature
+#include "hal/hal_peltier.hpp"          // peltier 
+#include "hal/hal_display.hpp"          // display
+
+// tasks
+#include "tasks/task_ui.hpp"            // ui (display)
+#include "tasks/task_temperature.hpp"   // temperature
+#include "tasks/task_control.hpp"       // control
+#include "tasks/task_peltier.hpp"       // peltier
 
 void setup() {
 
@@ -20,10 +26,12 @@ void setup() {
     state::init();
     hal::temperature::init();
     hal::peltier::init();
+    hal::display::init();
 
     tasks::peltier::startPeltierTask();
     tasks::temperature::startTemperatureTask();
     tasks::control::startControlTask();
+    tasks::ui::startUiTask();
 
     Serial.println("Setup concluído. Tasks rodando...");
     
