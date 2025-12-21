@@ -7,6 +7,9 @@
 
 // Constantes do circuito físico
 // constexpr promete que essas variáveis NÃO IRÃO MUDAR
+
+static constexpr bool SIMULATE_WITH_LDR = true;
+
 static constexpr float VCC = 3.3f;
 static constexpr float R_FIXED = 10000.0f;
 static constexpr float R0 = 10000.0f;
@@ -55,6 +58,13 @@ float hal::temperature::readCelsius(uint8_t samples) {
     }
 
     int raw = acc / samples;
+
+    if (SIMULATE_WITH_LDR) {
+        // Converte a luz (0 a 4095) numa escala de temperatura fictícia (5°C a 40°C)
+        // Se estiver variando ao contrário (muita luz = temperatura baixa), inverta a conta.
+        float tempSimulada = (raw / 4095.0f) * 35.0f + 5.0f; 
+        return tempSimulada;
+    }
 
     float V = rawToVoltage(raw);
     float Rntc = voltageToRntc(V);

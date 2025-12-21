@@ -4,8 +4,10 @@
 #include <iostream>
 #include "tasks/task_temperature.hpp"
 #include "tasks/task_control.hpp"
+#include "tasks/task_peltier.hpp"
 #include "app/state.hpp"
 #include "hal/hal_temperature.hpp"
+#include "hal/hal_peltier.hpp"
 
 void setup() {
 
@@ -17,9 +19,11 @@ void setup() {
     
     state::init();
     hal::temperature::init();
-    
+    hal::peltier::init();
+
+    tasks::peltier::startPeltierTask();
+    tasks::temperature::startReadTemperatureTask();
     tasks::temperature::startControlTask();
-    tasks::temperature::startTemperatureTask();
 
     Serial.println("Setup concluído. Tasks rodando...");
     
