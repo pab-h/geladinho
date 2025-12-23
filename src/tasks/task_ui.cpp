@@ -20,7 +20,8 @@ static void uiTaskRoutine(void* parameter) {
     vTaskDelay(pdMS_TO_TICKS(100));
     
     // Mostra tela de boas vindas rápida
-    hal::display::showTestScreen();
+    // hal::display::showTestScreen();
+    hal::display::drawSplashScreen();
     vTaskDelay(pdMS_TO_TICKS(2000));
 
     for (;;) {
@@ -28,8 +29,21 @@ static void uiTaskRoutine(void* parameter) {
         float current = state::getCurrentTemperature();
         float target = state::getTargetTemperature();
 
+        bool peltierOn = state::StatusBar::isPeltierActive(); 
+        bool fanOn = state::StatusBar::isFanActive(); 
+        bool motorOn = state::StatusBar::isMotorActive();
+
+        hal::display::clear(); // cleanning the screen 
+
+        hal::display::drawStatusBar(peltierOn, fanOn, motorOn);
+        
+        // hal::display::drawMainScreen(current, target);
+        
+        hal::display::show();
+
         // 2. Manda o HAL desenhar
-        hal::display::showStatus(current, target);
+
+            // hal::display::showStatus(current, target);
 
         // 3. Atualiza a tela a cada 500ms (não precisa ser super rápido)
         vTaskDelay(pdMS_TO_TICKS(500));

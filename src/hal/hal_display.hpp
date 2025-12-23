@@ -5,10 +5,21 @@ namespace hal {
     namespace display {
         
         void init();
+        
+        // Limpa a tela inteira (útil para o inicio do loop)
+        void clear();
 
-        void showStatus(float currentTemp, float targetTemp);
+        // Manda o que desenhamos para o hardware
+        void show();
 
-        void showTestScreen();
+        // Desenha a barra amarela baseada no status
+        void drawStatusBar(bool peltierOn, bool fanOn, bool motorOn);
+
+        // (Mantenha a showStatus antiga ou a de teste por enquanto, 
+        // depois a gente muda ela para desenhar só na parte azul)
+        void showTestScreen(); 
+
+        void drawSplashScreen();
     }
 
 }

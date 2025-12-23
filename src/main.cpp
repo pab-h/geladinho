@@ -29,10 +29,11 @@ void setup() {
     hal::display::init();
 
     tasks::peltier::startPeltierTask();
-    tasks::temperature::startTemperatureTask();
-    tasks::control::startControlTask();
+    tasks::temperature::startReadTemperatureTask();
+    tasks::temperature::startControlTask();
     tasks::ui::startUiTask();
 
+    
     Serial.println("Setup concluído. Tasks rodando...");
     
 }
