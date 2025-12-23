@@ -486,6 +486,36 @@
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "name": "GND",
+        "pcb_color": "rgb(0, 0, 255)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)"
+      },
+      {
+        "clearance": 0.4,
+        "name": "LOGIC_3V3",
+        "pcb_color": "rgb(255, 0, 255)",
+        "priority": 1,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.6
+      },
+      {
+        "clearance": 0.4,
+        "name": "POWER_12V",
+        "pcb_color": "rgb(255, 255, 0)",
+        "priority": 3,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 5.5
+      },
+      {
+        "clearance": 0.4,
+        "name": "POWER_5V",
+        "pcb_color": "rgb(255, 0, 0)",
+        "priority": 2,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 1.5
       }
     ],
     "meta": {
@@ -495,8 +525,40 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
-        "netclass": "Default",
-        "pattern": ""
+        "netclass": "POWER_12V",
+        "pattern": "+12V"
+      },
+      {
+        "netclass": "POWER_5V",
+        "pattern": "+5V"
+      },
+      {
+        "netclass": "LOGIC_3V3",
+        "pattern": "+3.3V"
+      },
+      {
+        "netclass": "LOGIC_3V3",
+        "pattern": "*_SIGNAL*"
+      },
+      {
+        "netclass": "LOGIC_3V3",
+        "pattern": "*Q*"
+      },
+      {
+        "netclass": "POWER_5V",
+        "pattern": "*BZ*"
+      },
+      {
+        "netclass": "POWER_12V",
+        "pattern": "Net-(D1-K)"
+      },
+      {
+        "netclass": "GND",
+        "pattern": "GND"
+      },
+      {
+        "netclass": "POWER_12V",
+        "pattern": "Net-(PE1-Pad1)"
       }
     ]
   },

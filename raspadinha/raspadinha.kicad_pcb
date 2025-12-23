@@ -981,7 +981,7 @@
 	(footprint "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical"
 		(layer "F.Cu")
 		(uuid "110c8943-f3b7-49d3-a0ee-78ac563d57b8")
-		(at 120.625 120.025 180)
+		(at 112.55 120.025 180)
 		(descr "Molex KK-254 Interconnect System, old/engineering part number: AE-6410-02A example for new part number: 22-27-2021, 2 Pins (http://www.molex.com/pdm_docs/sd/022272021_sd.pdf), generated with kicad-footprint-generator")
 		(tags "connector Molex KK-254 vertical")
 		(property "Reference" "TH1"
@@ -4664,7 +4664,7 @@
 		(property "Reference" "U1"
 			(at -11.355 -27.36 0)
 			(layer "F.SilkS")
-			(uuid "9a1cc2f7-debb-4dba-b266-0f0e51bbc8b7")
+			(uuid "54affa90-6d79-41f1-bbec-6fe2a26fe283")
 			(effects
 				(font
 					(size 1 1)
@@ -4675,7 +4675,7 @@
 		(property "Value" "ESP32-DEVKIT-V1"
 			(at -0.56 27.36 0)
 			(layer "F.Fab")
-			(uuid "a787c4cd-2262-439d-96ce-7622e8b40d1f")
+			(uuid "98e3508a-6192-4e9f-b70b-f3aa91be5982")
 			(effects
 				(font
 					(size 1 1)
@@ -4687,7 +4687,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "bd526ad9-c450-4770-a44c-a0031e4df266")
+			(uuid "428a2d2b-8916-46c8-b429-77c224d00ff8")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4699,7 +4699,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "f63f1d86-e596-4745-9dad-61c5e25cde39")
+			(uuid "9ae68c07-1320-47b4-a3c0-f0fe0f10de63")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5922,7 +5922,7 @@
 	(footprint "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical"
 		(layer "F.Cu")
 		(uuid "d48b5011-d77b-4976-9186-5713ab5b15fd")
-		(at 112.55 120.025 180)
+		(at 120.625 120.025 180)
 		(descr "Molex KK-254 Interconnect System, old/engineering part number: AE-6410-02A example for new part number: 22-27-2021, 2 Pins (http://www.molex.com/pdm_docs/sd/022272021_sd.pdf), generated with kicad-footprint-generator")
 		(tags "connector Molex KK-254 vertical")
 		(property "Reference" "M1"
