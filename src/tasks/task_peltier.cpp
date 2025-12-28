@@ -49,7 +49,7 @@ static void peltierTaskRoutine(void* parameter) {
         uint8_t newCommand;
         if (xQueueReceive(peltierQueue, &newCommand, 0) == pdTRUE) {
             targetPower = newCommand;
-            Serial.printf("[PeltierTask] Novo alvo recebido: %d%%\n", targetPower);
+            // Serial.printf("[PeltierTask] Novo alvo recebido: %d%%\n", targetPower);
         }
 
         // (Soft Start / Soft Stop)

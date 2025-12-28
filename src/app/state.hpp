@@ -28,4 +28,11 @@ namespace state {
 
     }
 
+    namespace rotatory {
+
+        void setPosition(int position);
+        long getPosition();
+
+    }
+
 }

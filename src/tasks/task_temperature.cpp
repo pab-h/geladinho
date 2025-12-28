@@ -45,7 +45,7 @@ static void readTemperatureTask(void* parameter) {
 
     for (;;) {
         float temp = hal::temperature::readCelsius(10);
-        Serial.printf("[TempTask] Leitura Raw/Calc: %.2f °C\n", temp);
+        // Serial.printf("[TempTask] Leitura Raw/Calc: %.2f °C\n", temp);
         state::setCurrentTemperature(temp);
 
         // Aguarda 2000ms antes da próxima leitura
@@ -64,14 +64,14 @@ static void controlTask(void* parameter) {
 
         if (diff > 0.5f) {
             // temperatura está acima → precisa resfriar
-            Serial.println("Controle: Acima do alvo -> Deve resfriar");
+            // Serial.println("Controle: Acima do alvo -> Deve resfriar");
             tasks::peltier::setTargetPower(100);
 
             state::StatusBar::setPeltierActive(true);
         }
         else if (diff < -0.5f) {
             // temperatura está abaixo → está frio demais
-            Serial.println("Controle: Abaixo do alvo -> Desligar Peltier");
+            // Serial.println("Controle: Abaixo do alvo -> Desligar Peltier");
             tasks::peltier::setTargetPower(0);
             state::StatusBar::setPeltierActive(false);
         }

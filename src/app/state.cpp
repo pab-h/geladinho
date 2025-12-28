@@ -12,6 +12,9 @@ namespace state {
     static bool _fanActive = true;
     static bool _motorActive = false;
 
+    // Encoder 
+    static long _position = 12.0f;
+
     static SemaphoreHandle_t _stateMutex = nullptr;
 
     void init() {
@@ -93,6 +96,26 @@ namespace state {
         bool isMotorActive() {
             return _motorActive;
         }
+    }
+
+    namespace rotatory {
+
+        long getPosition() {
+            long val = 0;
+            if (xSemaphoreTake(_stateMutex, portMAX_DELAY) == pdTRUE) {
+                val = _position;
+                xSemaphoreGive(_stateMutex);
+            }
+            return val;
+        }
+        
+        void setPosition(int position) {
+            if (xSemaphoreTake(_stateMutex, portMAX_DELAY) == pdTRUE) {
+                _position = position;
+                xSemaphoreGive(_stateMutex);
+            }
+        }
+
     }
     
 }
