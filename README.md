@@ -60,13 +60,6 @@ Este projeto foi desenvolvido com a colaboração de:
         <sub><b>pab-h</b></sub>
       </a>
     </td>
-    <td align="center">
-      <a href="https://github.com/RyamLael">
-        <img src="https://github.com/RyamLael.png" width="100px;" alt=""/>
-        <br />
-        <sub><b>RyamLael</b></sub>
-      </a>
-    </td>
   </tr>
 </table>
 
