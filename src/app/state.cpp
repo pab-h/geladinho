@@ -4,7 +4,7 @@
 namespace state {
 
     // Variáveis privadas - valor inicial padrão
-    static float _targetTemperature = 20.0f;
+    static float _targetTemperature = 12.0f;
     static float _currentTemperature = 25.0f;
 
     // Status

@@ -11,4 +11,8 @@ namespace pins {
     constexpr int I2C_SDA_PIN = 21;
     constexpr int I2C_SCL_PIN = 22;
 
+    // Encoder
+    constexpr int sigA_PIN = 35;
+    constexpr int sigB_PIN = 19;
+
 }

@@ -19,6 +19,8 @@ namespace hal {
         // depois a gente muda ela para desenhar só na parte azul)
         void showTestScreen(); 
 
+        void drawMainScreen(float current, float target);
+
         void drawSplashScreen();
     }
 

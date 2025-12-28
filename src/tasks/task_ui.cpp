@@ -17,11 +17,14 @@ namespace tasks {
 }
 
 static void uiTaskRoutine(void* parameter) {
-    vTaskDelay(pdMS_TO_TICKS(100));
     
+    vTaskDelay(pdMS_TO_TICKS(100));
+    hal::display::clear();
+
     // Mostra tela de boas vindas rápida
     // hal::display::showTestScreen();
     hal::display::drawSplashScreen();
+
     vTaskDelay(pdMS_TO_TICKS(2000));
 
     for (;;) {
@@ -37,7 +40,7 @@ static void uiTaskRoutine(void* parameter) {
 
         hal::display::drawStatusBar(peltierOn, fanOn, motorOn);
         
-        // hal::display::drawMainScreen(current, target);
+        hal::display::drawMainScreen(current, target);
         
         hal::display::show();
 

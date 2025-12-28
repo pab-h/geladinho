@@ -1,5 +1,5 @@
 #include "hal_display.hpp"
-#include "hal_display_assets.hpp" // <--- Importante: Incluir os ícones que criamos
+#include "hal_display_assets.hpp"
 #include "pins.hpp"
 #include <Arduino.h>
 #include <Wire.h>
@@ -52,11 +52,52 @@ void hal::display::drawStatusBar(bool peltierOn, bool fanOn, bool motorOn) {
     if (motorOn) {
         oled.drawBitmap(26, 4, assets::icon_motor, 8, 8, SSD1306_WHITE);
     }
+
+    oled.drawLine(81, 2 , 81, 12, SSD1306_WHITE);
+
+    oled.setTextSize(1);
+    oled.setCursor(85, 5); 
+    oled.print("ArduLab");
+
+
+
 }
 
 // Mantenha sua showTestScreen aqui embaixo se quiser, para não quebrar o código
 void hal::display::showTestScreen() {
     // ... seu código antigo ...
+}
+
+void hal::display::drawMainScreen(float current, float target) {
+    
+    oled.setTextColor(SSD1306_WHITE);
+
+    // --- BLOCO 1: TEMPERATURA ATUAL (DESTAQUE) ---
+    // Label pequena
+    oled.setTextSize(1);
+    oled.setCursor(0, 20); 
+    oled.print("Temp Atual:");
+
+    // Valor GRANDE
+    oled.setTextSize(2);      // Fonte 2x maior
+    oled.setCursor(0, 32);    // Pulei 12 pixels pra baixo
+    oled.print(current, 1);   // Ex: "25.5"
+    
+    // Unidade pequena ao lado do número grande
+    oled.setTextSize(1);
+    oled.print(" C"); 
+
+    // --- BLOCO 2: ALVO (DISCRETO) ---
+    // Vamos desenhar uma linhazinha pra separar?
+    oled.drawLine(70, 20, 70, 50, SSD1306_WHITE); // Linha vertical no meio
+
+    oled.setCursor(75, 20);
+    oled.print("Alvo:");
+    
+    oled.setCursor(75, 38);
+    oled.setTextSize(1); // Garante que voltou pro pequeno
+    oled.print(target, 1);
+    oled.print(" C");
 }
 
 void hal::display::drawSplashScreen() {
