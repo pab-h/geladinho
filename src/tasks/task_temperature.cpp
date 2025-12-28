@@ -33,6 +33,7 @@ namespace tasks {
                 nullptr,
                 1
             );
+
         }
 
     }
@@ -65,13 +66,14 @@ static void controlTask(void* parameter) {
             // temperatura está acima → precisa resfriar
             Serial.println("Controle: Acima do alvo -> Deve resfriar");
             tasks::peltier::setTargetPower(100);
+
+            state::StatusBar::setPeltierActive(true);
         }
         else if (diff < -0.5f) {
             // temperatura está abaixo → está frio demais
             Serial.println("Controle: Abaixo do alvo -> Desligar Peltier");
             tasks::peltier::setTargetPower(0);
-
-            // aqui vamos desligar o Peltier futuramente
+            state::StatusBar::setPeltierActive(false);
         }
         else {
             Serial.println("Controle: Dentro da faixa -> manter");

@@ -3,9 +3,14 @@
 
 namespace state {
 
-    //Variáveis privadas - valor inicial padrão
-    static float _targetTemperature = 20.0f;
+    // Variáveis privadas - valor inicial padrão
+    static float _targetTemperature = 12.0f;
     static float _currentTemperature = 25.0f;
+
+    // Status
+    static bool _peltierActive = false;
+    static bool _fanActive = true;
+    static bool _motorActive = false;
 
     static SemaphoreHandle_t _stateMutex = nullptr;
 
@@ -53,4 +58,41 @@ namespace state {
         }
         return val;
     }
+    
+    namespace StatusBar{
+
+        void setPeltierActive(bool active){
+            if (xSemaphoreTake(_stateMutex, portMAX_DELAY) == pdTRUE) {
+                _peltierActive = active;
+                xSemaphoreGive(_stateMutex);
+            }
+        }
+
+        void setFanActive(bool active){
+            if (xSemaphoreTake(_stateMutex, portMAX_DELAY) == pdTRUE) {
+                _fanActive = active;
+                xSemaphoreGive(_stateMutex);
+            }
+        }
+
+        void setMotorActive(bool active){
+            if (xSemaphoreTake(_stateMutex, portMAX_DELAY) == pdTRUE) {
+                _motorActive = active;
+                xSemaphoreGive(_stateMutex);
+            }
+        }
+
+        bool isPeltierActive() {
+            return _peltierActive;
+        }
+
+        bool isFanActive() {
+            return _fanActive;
+        }
+
+        bool isMotorActive() {
+            return _motorActive;
+        }
+    }
+    
 }
