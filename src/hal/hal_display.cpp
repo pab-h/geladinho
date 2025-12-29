@@ -34,7 +34,7 @@ void hal::display::show() {
     oled.display();
 }
 
-void hal::display::drawStatusBar(bool peltierOn, bool fanOn, bool motorOn) {
+void hal::display::drawstatusBar(bool peltierOn, bool fanOn, bool motorOn) {
     // Line to split areas
     oled.drawLine(0, 15, SCREEN_WIDTH, 15, SSD1306_WHITE);
 

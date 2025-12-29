@@ -1,55 +1,40 @@
 #include <Arduino.h>
-#include "drivers/RotaryEncoder.hpp"
 #include "pins.hpp"
+#include "hal_rotary.hpp"
+#include "app/state.hpp"
 
 
-static constexpr int sigA = 0;
-static constexpr int sigB = 0;
-static constexpr int position = 0;
-static constexpr bool lastSigaState = false;
-static constexpr bool currentSigaState = false;
+static bool lastSigAState = false;
 
+void hal::rotatory::init() {
 
-void RotaryEncoder::setup(uint8_t siga, uint8_t sigb) {
+    pinMode(pins::sigA_PIN, INPUT_PULLUP);
+    pinMode(pins::sigB_PIN, INPUT_PULLUP);
 
-    this->siga = siga;
-    this->sigb = sigb;
+    lastSigAState = digitalRead(pins::sigA_PIN);
+
+}
+
+void hal::rotatory::readPosition(){
+    bool currentSigA = digitalRead(pins::sigA_PIN);
     
-    this->position         = 0;
-    this->lastSigaState    = false;
-    this->currentSigaState = false;
-
-    pinMode(this->siga, INPUT);
-    pinMode(this->sigb, INPUT);
-
-}
-
-void hal::rotatory::init(uint8_t siga, uint8_t sigb) {
-
-    pinMode(pins::PELTIER_PIN, OUTPUT);
-    pinMode(pins::sigA_PIN, INPUT);
-    pinMode(pins::sigB_PIN, INPUT);
-
-}
-
-int RotaryEncoder::getPosition() {
-    return this->position;
-}
-
-void RotaryEncoder::read() {
-    
-    this->currentSigaState = digitalRead(this->siga);
-
     // check rising edge 
-    if (!this->lastSigaState && this->currentSigaState) {
-        // check direction
-        if (digitalRead(this->sigb)) {
-            this->position ++;
+
+    if (!lastSigAState && currentSigA){
+
+        long currentPos = 0;
+        
+        //check direction
+        if(digitalRead(pins::sigB_PIN)){
+            currentPos ++;
+            Serial.print("Leitura feita, posicao ++");
         } else {
-            this->position --;
+            currentPos --;            
+            Serial.print("Leitura feita, posicao --");
         }
+        state::setTargetTemperature(state::getTargetTemperature() + currentPos);
     }
 
-    this->lastSigaState = this->currentSigaState;
+    lastSigAState = currentSigA;
 
 }

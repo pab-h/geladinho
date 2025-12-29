@@ -4,20 +4,23 @@
 namespace state {
 
     // Variáveis privadas - valor inicial padrão
-    static float _targetTemperature = 12.0f;
-    static float _currentTemperature = 25.0f;
+    static float targetTemperature = 12.0f;
+    static float currentTemperature = 25.0f;
 
     // Status
-    static bool _peltierActive = false;
-    static bool _fanActive = true;
-    static bool _motorActive = false;
+    static bool peltierActive = false;
+    static bool fanActive = true;
+    static bool motorActive = false;
 
-    static SemaphoreHandle_t _stateMutex = nullptr;
+    // Encoder 
+    static long position = 12.0f;
+
+    static SemaphoreHandle_t stateMutex = nullptr;
 
     void init() {
-        _stateMutex = xSemaphoreCreateMutex();
+        stateMutex = xSemaphoreCreateMutex();
 
-        if (_stateMutex == NULL) {
+        if (stateMutex == NULL) {
             Serial.println("[CRITICAL] (state.cpp) Falha ao criar Mutex! em memória RAM (Heap exausted).");
         }
     }
@@ -27,72 +30,92 @@ namespace state {
 
     void setTargetTemperature(float temp) {
 
-        if (xSemaphoreTake(_stateMutex, portMAX_DELAY) == pdTRUE) {
-            _targetTemperature = temp;
+        if (xSemaphoreTake(stateMutex, portMAX_DELAY) == pdTRUE) {
+            targetTemperature = temp;
             
-            xSemaphoreGive(_stateMutex);
+            xSemaphoreGive(stateMutex);
         }
     }
 
     float getTargetTemperature() {
         float val = 0.0f;
-        if (xSemaphoreTake(_stateMutex, portMAX_DELAY) == pdTRUE) {
-            val = _targetTemperature;
-            xSemaphoreGive(_stateMutex);
+        if (xSemaphoreTake(stateMutex, portMAX_DELAY) == pdTRUE) {
+            val = targetTemperature;
+            xSemaphoreGive(stateMutex);
         }
         return val;
     }
 
     void setCurrentTemperature(float temp) {
-        if (xSemaphoreTake(_stateMutex, portMAX_DELAY) == pdTRUE) {
-            _currentTemperature = temp;
-            xSemaphoreGive(_stateMutex);
+        if (xSemaphoreTake(stateMutex, portMAX_DELAY) == pdTRUE) {
+            currentTemperature = temp;
+            xSemaphoreGive(stateMutex);
         }
     }
 
     float getCurrentTemperature() {
         float val = 0.0f;
-        if (xSemaphoreTake(_stateMutex, portMAX_DELAY) == pdTRUE) {
-            val = _currentTemperature;
-            xSemaphoreGive(_stateMutex);
+        if (xSemaphoreTake(stateMutex, portMAX_DELAY) == pdTRUE) {
+            val = currentTemperature;
+            xSemaphoreGive(stateMutex);
         }
         return val;
     }
     
-    namespace StatusBar{
+    namespace statusBar{
 
         void setPeltierActive(bool active){
-            if (xSemaphoreTake(_stateMutex, portMAX_DELAY) == pdTRUE) {
-                _peltierActive = active;
-                xSemaphoreGive(_stateMutex);
+            if (xSemaphoreTake(stateMutex, portMAX_DELAY) == pdTRUE) {
+                peltierActive = active;
+                xSemaphoreGive(stateMutex);
             }
         }
 
         void setFanActive(bool active){
-            if (xSemaphoreTake(_stateMutex, portMAX_DELAY) == pdTRUE) {
-                _fanActive = active;
-                xSemaphoreGive(_stateMutex);
+            if (xSemaphoreTake(stateMutex, portMAX_DELAY) == pdTRUE) {
+                fanActive = active;
+                xSemaphoreGive(stateMutex);
             }
         }
 
         void setMotorActive(bool active){
-            if (xSemaphoreTake(_stateMutex, portMAX_DELAY) == pdTRUE) {
-                _motorActive = active;
-                xSemaphoreGive(_stateMutex);
+            if (xSemaphoreTake(stateMutex, portMAX_DELAY) == pdTRUE) {
+                motorActive = active;
+                xSemaphoreGive(stateMutex);
             }
         }
 
         bool isPeltierActive() {
-            return _peltierActive;
+            return peltierActive;
         }
 
         bool isFanActive() {
-            return _fanActive;
+            return fanActive;
         }
 
         bool isMotorActive() {
-            return _motorActive;
+            return motorActive;
         }
+    }
+
+    namespace rotatory {
+
+        long getPosition() {
+            long val = 0;
+            if (xSemaphoreTake(stateMutex, portMAX_DELAY) == pdTRUE) {
+                val = position;
+                xSemaphoreGive(stateMutex);
+            }
+            return val;
+        }
+        
+        void setPosition(int position) {
+            if (xSemaphoreTake(stateMutex, portMAX_DELAY) == pdTRUE) {
+                position = position;
+                xSemaphoreGive(stateMutex);
+            }
+        }
+
     }
     
 }
