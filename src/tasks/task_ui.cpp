@@ -32,13 +32,13 @@ static void uiTaskRoutine(void* parameter) {
         float current = state::getCurrentTemperature();
         float target = state::getTargetTemperature();
 
-        bool peltierOn = state::StatusBar::isPeltierActive(); 
-        bool fanOn = state::StatusBar::isFanActive(); 
-        bool motorOn = state::StatusBar::isMotorActive();
+        bool peltierOn = state::statusBar::isPeltierActive(); 
+        bool fanOn = state::statusBar::isFanActive(); 
+        bool motorOn = state::statusBar::isMotorActive();
 
         hal::display::clear(); // cleanning the screen 
 
-        hal::display::drawStatusBar(peltierOn, fanOn, motorOn);
+        hal::display::drawstatusBar(peltierOn, fanOn, motorOn);
         
         hal::display::drawMainScreen(current, target);
         

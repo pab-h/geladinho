@@ -67,13 +67,13 @@ static void controlTask(void* parameter) {
             // Serial.println("Controle: Acima do alvo -> Deve resfriar");
             tasks::peltier::setTargetPower(100);
 
-            state::StatusBar::setPeltierActive(true);
+            state::statusBar::setPeltierActive(true);
         }
         else if (diff < -0.5f) {
             // temperatura está abaixo → está frio demais
             // Serial.println("Controle: Abaixo do alvo -> Desligar Peltier");
             tasks::peltier::setTargetPower(0);
-            state::StatusBar::setPeltierActive(false);
+            state::statusBar::setPeltierActive(false);
         }
         else {
             Serial.println("Controle: Dentro da faixa -> manter");

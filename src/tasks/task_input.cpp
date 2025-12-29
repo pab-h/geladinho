@@ -43,6 +43,6 @@ static void inputTaskRoutine(void* parameter) {
         // 3. Delay curto (Polling)
         // 5ms é suficiente para botões manuais. 
         // Se fosse um encoder real girando rápido, talvez precisasse de 1ms ou interrupção.
-        vTaskDelay(pdMS_TO_TICKS(5)); 
+        vTaskDelay(pdMS_TO_TICKS(200)); 
     }
 }

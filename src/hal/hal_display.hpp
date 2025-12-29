@@ -13,7 +13,7 @@ namespace hal {
         void show();
 
         // Desenha a barra amarela baseada no status
-        void drawStatusBar(bool peltierOn, bool fanOn, bool motorOn);
+        void drawstatusBar(bool peltierOn, bool fanOn, bool motorOn);
 
         // (Mantenha a showStatus antiga ou a de teste por enquanto, 
         // depois a gente muda ela para desenhar só na parte azul)

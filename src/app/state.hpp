@@ -14,7 +14,7 @@ namespace state {
     void setCurrentTemperature(float temp);
     float getCurrentTemperature();
 
-    namespace StatusBar { 
+    namespace statusBar { 
 
         // Peltier Status
         void setPeltierActive(bool active);
